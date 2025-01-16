@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>OgiParamDlg</class>
+ <widget class="QWidget" name="OgiParamDlg">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>396</width>
+    <height>315</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>检测参数设置</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget {
+            background-color: #F0F8FF; 
+        }
+        QPushButton {
+            background-color: #E6F3FF;
+            border: 1px solid #B0C4DE;
+            border-radius: 4px;
+            padding: 5px 15px;
+            color: #2F4F4F;
+            font-size: 16pt;
+        }
+        QPushButton:hover {
+            background-color: #CCE8FF;
+        }
+        QPushButton:pressed {
+            background-color: #B0D8FF;
+        }
+		QComboBox {
+    background-color: #F0F8FF;
+    border: 1px solid #B0C4DE;
+    border-radius: 4px;
+    padding: 5px;
+    color: #2F4F4F;
+    font-size: 16pt;
+}
+
+QComboBox:hover {
+    background-color: #CCE8FF;
+}
+
+QComboBox:pressed {
+    background-color: #B0D8FF;
+}
+
+QComboBox QAbstractItemView {
+    background-color: #FFFFFF;
+    border: 1px solid #B0C4DE;
+    color: #2F4F4F;
+    font-size: 16pt;
+}
+
+QComboBox QAbstractItemView::item {
+    padding: 5px 15px;
+}
+
+QComboBox QAbstractItemView::item:selected {
+    background-color: #CCE8FF;
+    color: #2F4F4F;
+}
+
+    </string>
+  </property>
+  <widget class="QPushButton" name="pushButton">
+   <property name="geometry">
+    <rect>
+     <x>120</x>
+     <y>230</y>
+     <width>131</width>
+     <height>43</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>微软雅黑</family>
+     <pointsize>16</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>确   定</string>
+   </property>
+  </widget>
+  <widget class="QScrollBar" name="horizontalScrollBar">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>100</y>
+     <width>331</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>0</width>
+     <height>10</height>
+    </size>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QScrollBar:vertical, QScrollBar:horizontal {
+    background-color: #F0F8FF;
+    border: 1px solid #B0C4DE;
+    border-radius: 3px;
+    width: 12px;
+    height: 3px;
+}
+
+QScrollBar::handle:vertical, QScrollBar::handle:horizontal {
+    background-color: #A9C8E5;  /* 深蓝色，增加对比度 */
+    border-radius: 3px;
+    min-height: 10px;
+    min-width: 10px;
+}
+
+QScrollBar::handle:vertical:hover, QScrollBar::handle:horizontal:hover {
+    background-color: #7FA6D7;  /* 鼠标悬停时更深的蓝色 */
+}
+
+QScrollBar::handle:vertical:pressed, QScrollBar::handle:horizontal:pressed {
+    background-color: #5C86C0;  /* 按下时使用更深的蓝色 */
+}
+
+QScrollBar::add-line:vertical, QScrollBar::add-line:horizontal,
+QScrollBar::sub-line:vertical, QScrollBar::sub-line:horizontal {
+    background-color: transparent;
+    border: none;
+}
+
+QScrollBar::add-page:vertical, QScrollBar::add-page:horizontal,
+QScrollBar::sub-page:vertical, QScrollBar::sub-page:horizontal {
+    background: none;
+}
+</string>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Horizontal</enum>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>23</x>
+     <y>49</y>
+     <width>61</width>
+     <height>35</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>微软雅黑</family>
+     <pointsize>20</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>阈值:</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="edit_Thr">
+   <property name="geometry">
+    <rect>
+     <x>90</x>
+     <y>49</y>
+     <width>269</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>微软雅黑</family>
+     <pointsize>20</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>160</y>
+     <width>61</width>
+     <height>35</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>微软雅黑</family>
+     <pointsize>20</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>模式:</string>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="cb_mode">
+   <property name="geometry">
+    <rect>
+     <x>97</x>
+     <y>160</y>
+     <width>261</width>
+     <height>42</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>微软雅黑</family>
+     <pointsize>16</pointsize>
+    </font>
+   </property>
+   <item>
+    <property name="text">
+     <string>1</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>2</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>3</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>4</string>
+    </property>
+   </item>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
