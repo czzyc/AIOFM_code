@@ -1,0 +1,511 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1024</width>
+    <height>768</height>
+   </rect>
+  </property>
+  <property name="contextMenuPolicy">
+   <enum>Qt::DefaultContextMenu</enum>
+  </property>
+  <property name="windowTitle">
+   <string>便携式多光谱气体检测仪</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QMainWindow {
+    background-color: #F0F8FF;
+}
+QTabWidget::pane {
+    border: 1px solid #A0C4FF;
+    background: #F5F9FF;
+    border-radius: 5px;
+}
+QTabWidget::tab-bar {
+    left: 5px;
+}
+QTabBar::tab {
+    background: #E6F0FF;
+    border: 1px solid #A0C4FF;
+    padding: 8px 20px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+QTabBar::tab:selected {
+    background: #FFFFFF;
+    border-bottom-color: #FFFFFF;
+}
+QPushButton {
+    background-color: #4A90E2;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 16px;
+    min-height: 20px;
+}
+QPushButton:hover {
+    background-color: #357ABD;
+}
+QPushButton:pressed {
+    background-color: #2E6DA4;
+}
+QCheckBox {
+    color: #2C3E50;
+}
+QLineEdit {
+    padding: 6px;
+    border: 1px solid #A0C4FF;
+    border-radius: 4px;
+    background: white;
+}</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QHBoxLayout" name="horizontalLayout_2">
+    <item>
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <item>
+       <widget class="QWidget" name="widget_2" native="true">
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout_3">
+         <item>
+          <widget class="QWidget" name="widget" native="true">
+           <property name="maximumSize">
+            <size>
+             <width>200</width>
+             <height>16777215</height>
+            </size>
+           </property>
+           <layout class="QVBoxLayout" name="verticalLayout_3">
+            <item>
+             <layout class="QVBoxLayout" name="verticalLayout_2">
+              <item>
+               <widget class="QPushButton" name="btn_start">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                  <horstretch>0</horstretch>
+                  <verstretch>1</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>100</height>
+                 </size>
+                </property>
+                <property name="font">
+                 <font>
+                  <family>微软雅黑</family>
+                  <pointsize>24</pointsize>
+                 </font>
+                </property>
+                <property name="styleSheet">
+                 <string>QCheckBox::indicator {
+    width: 30px;   /* 设置复选框宽度 */
+    height: 30px;  /* 设置复选框高度 */
+}
+
+QCheckBox::indicator:checked {
+    background-color: #4CAF50; /* 选中时背景色为绿色 */
+    border: 2px solid #4CAF50; /* 设置选中时的边框颜色 */
+}
+
+QCheckBox::indicator:unchecked {
+    background-color: #ffffff; /* 未选中时背景色为白色 */
+    border: 2px solid #A3C8FF; /* 设置未选中时的边框颜色 */
+}</string>
+                </property>
+                <property name="text">
+                 <string>开始检测</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="btn_file_3">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                  <horstretch>0</horstretch>
+                  <verstretch>1</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>100</height>
+                 </size>
+                </property>
+                <property name="font">
+                 <font>
+                  <family>微软雅黑</family>
+                  <pointsize>24</pointsize>
+                 </font>
+                </property>
+                <property name="styleSheet">
+                 <string>QCheckBox::indicator {
+    width: 30px;   /* 设置复选框宽度 */
+    height: 30px;  /* 设置复选框高度 */
+}
+
+QCheckBox::indicator:checked {
+    background-color: #4CAF50; /* 选中时背景色为绿色 */
+    border: 2px solid #4CAF50; /* 设置选中时的边框颜色 */
+}
+
+QCheckBox::indicator:unchecked {
+    background-color: #ffffff; /* 未选中时背景色为白色 */
+    border: 2px solid #A3C8FF; /* 设置未选中时的边框颜色 */
+}</string>
+                </property>
+                <property name="text">
+                 <string>停止检测</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QCheckBox" name="checkBox">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                  <horstretch>0</horstretch>
+                  <verstretch>1</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="font">
+                 <font>
+                  <family>微软雅黑</family>
+                  <pointsize>24</pointsize>
+                 </font>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QCheckBox::indicator {
+    width: 30px;   /* 设置复选框宽度 */
+    height: 30px;  /* 设置复选框高度 */
+}
+
+QCheckBox::indicator:checked {
+    background-color: #4CAF50; /* 选中时背景色为绿色 */
+    border: 2px solid #4CAF50; /* 设置选中时的边框颜色 */
+}
+
+QCheckBox::indicator:unchecked {
+    background-color: #ffffff; /* 未选中时背景色为白色 */
+    border: 2px solid #A3C8FF; /* 设置未选中时的边框颜色 */
+}</string>
+                </property>
+                <property name="text">
+                 <string>保存数据</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </widget>
+         </item>
+         <item>
+          <widget class="QTabWidget" name="tabWidget">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="font">
+            <font>
+             <family>微软雅黑</family>
+             <pointsize>24</pointsize>
+            </font>
+           </property>
+           <property name="layoutDirection">
+            <enum>Qt::LeftToRight</enum>
+           </property>
+           <property name="currentIndex">
+            <number>2</number>
+           </property>
+           <widget class="QWidget" name="tab">
+            <property name="minimumSize">
+             <size>
+              <width>320</width>
+              <height>256</height>
+             </size>
+            </property>
+            <attribute name="title">
+             <string>可见相机</string>
+            </attribute>
+            <layout class="QHBoxLayout" name="horizontalLayout">
+             <item>
+              <widget class="QLabel" name="label">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="minimumSize">
+                <size>
+                 <width>640</width>
+                 <height>512</height>
+                </size>
+               </property>
+               <property name="text">
+                <string/>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+           <widget class="QWidget" name="tab_2">
+            <attribute name="title">
+             <string>红外相机</string>
+            </attribute>
+            <layout class="QHBoxLayout" name="horizontalLayout_5">
+             <item>
+              <widget class="QLabel" name="label_2">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="minimumSize">
+                <size>
+                 <width>640</width>
+                 <height>512</height>
+                </size>
+               </property>
+               <property name="text">
+                <string/>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+           <widget class="QWidget" name="tab_3">
+            <attribute name="title">
+             <string>分析结果</string>
+            </attribute>
+            <layout class="QHBoxLayout" name="horizontalLayout_4">
+             <item>
+              <widget class="QLabel" name="label_3">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="minimumSize">
+                <size>
+                 <width>640</width>
+                 <height>512</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>640</width>
+                 <height>512</height>
+                </size>
+               </property>
+               <property name="text">
+                <string/>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1024</width>
+     <height>37</height>
+    </rect>
+   </property>
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>0</width>
+     <height>35</height>
+    </size>
+   </property>
+   <property name="sizeIncrement">
+    <size>
+     <width>0</width>
+     <height>35</height>
+    </size>
+   </property>
+   <property name="baseSize">
+    <size>
+     <width>0</width>
+     <height>35</height>
+    </size>
+   </property>
+   <property name="font">
+    <font>
+     <family>Times New Roman</family>
+     <pointsize>20</pointsize>
+    </font>
+   </property>
+   <property name="contextMenuPolicy">
+    <enum>Qt::ActionsContextMenu</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">
+    QMenuBar::item:selected {
+        background: #CCE8FF;
+        border-radius: 4px;
+    }
+    QMenu {
+        background-color: #F0F8FF;
+        border: 1px solid #B0C4DE;
+    }
+    QMenu::item {
+        padding: 5px 30px 5px 40px;
+    }
+    QMenu::item:selected {
+        background-color: #CCE8FF;
+    }</string>
+   </property>
+   <widget class="QMenu" name="menu_SF6">
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>0</width>
+      <height>40</height>
+     </size>
+    </property>
+    <property name="sizeIncrement">
+     <size>
+      <width>0</width>
+      <height>35</height>
+     </size>
+    </property>
+    <property name="baseSize">
+     <size>
+      <width>0</width>
+      <height>35</height>
+     </size>
+    </property>
+    <property name="font">
+     <font>
+      <family>微软雅黑</family>
+      <pointsize>16</pointsize>
+     </font>
+    </property>
+    <property name="layoutDirection">
+     <enum>Qt::LeftToRight</enum>
+    </property>
+    <property name="title">
+     <string>文件[F]</string>
+    </property>
+    <property name="toolTipsVisible">
+     <bool>false</bool>
+    </property>
+    <addaction name="action"/>
+    <addaction name="action_2"/>
+   </widget>
+   <widget class="QMenu" name="menu_Set">
+    <property name="font">
+     <font>
+      <family>微软雅黑</family>
+      <pointsize>16</pointsize>
+     </font>
+    </property>
+    <property name="title">
+     <string>仪器参数设置[S]</string>
+    </property>
+    <addaction name="action_motor"/>
+    <addaction name="action_ogi"/>
+   </widget>
+   <addaction name="menu_SF6"/>
+   <addaction name="menu_Set"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar">
+   <property name="minimumSize">
+    <size>
+     <width>150</width>
+     <height>100</height>
+    </size>
+   </property>
+   <property name="font">
+    <font>
+     <family>微软雅黑</family>
+     <pointsize>10</pointsize>
+    </font>
+   </property>
+  </widget>
+  <action name="action">
+   <property name="text">
+    <string>历史文件</string>
+   </property>
+   <property name="font">
+    <font>
+     <family>微软雅黑</family>
+     <pointsize>16</pointsize>
+    </font>
+   </property>
+  </action>
+  <action name="action_2">
+   <property name="text">
+    <string>初始化位置</string>
+   </property>
+   <property name="font">
+    <font>
+     <family>微软雅黑</family>
+     <pointsize>16</pointsize>
+    </font>
+   </property>
+  </action>
+  <action name="action11">
+   <property name="text">
+    <string>11</string>
+   </property>
+  </action>
+  <action name="action22">
+   <property name="text">
+    <string>22</string>
+   </property>
+  </action>
+  <action name="action_motor">
+   <property name="text">
+    <string>电机设置</string>
+   </property>
+  </action>
+  <action name="action_ogi">
+   <property name="text">
+    <string>检测设置</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

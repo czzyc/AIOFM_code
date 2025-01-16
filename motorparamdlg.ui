@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>motorParamdlg</class>
+ <widget class="QWidget" name="motorParamdlg">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>300</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>电机参数设置</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget {
+            background-color: #F0F8FF; 
+        }
+        QPushButton {
+            background-color: #E6F3FF;
+            border: 1px solid #B0C4DE;
+            border-radius: 4px;
+            padding: 5px 15px;
+            color: #2F4F4F;
+            font-size: 16pt;
+        }
+        QPushButton:hover {
+            background-color: #CCE8FF;
+        }
+        QPushButton:pressed {
+            background-color: #B0D8FF;
+        }
+		QComboBox {
+    background-color: #F0F8FF;
+    border: 1px solid #B0C4DE;
+    border-radius: 4px;
+    padding: 5px;
+    color: #2F4F4F;
+    font-size: 16pt;
+}
+
+QComboBox:hover {
+    background-color: #CCE8FF;
+}
+
+QComboBox:pressed {
+    background-color: #B0D8FF;
+}
+
+QComboBox QAbstractItemView {
+    background-color: #FFFFFF;
+    border: 1px solid #B0C4DE;
+    color: #2F4F4F;
+    font-size: 16pt;
+}
+
+QComboBox QAbstractItemView::item {
+    padding: 5px 15px;
+}
+
+QComboBox QAbstractItemView::item:selected {
+    background-color: #CCE8FF;
+    color: #2F4F4F;
+}
+
+    </string>
+  </property>
+  <widget class="QPushButton" name="pushButton">
+   <property name="geometry">
+    <rect>
+     <x>150</x>
+     <y>210</y>
+     <width>91</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
+   <property name="text">
+    <string>PushButton</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
